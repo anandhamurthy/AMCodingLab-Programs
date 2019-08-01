@@ -1,1 +1,15 @@
 Except the Nth Position
+
+#The program must accept a string value S and an integer N as the input.
+#The program must remove the characters which are present at the positions of multiples of N.
+#Print the modified string as the output.
+
+#code
+s,n=input().split()
+n=int(n)
+for i in range(1,len(s)):
+    if i%n==0:
+        pass
+    else:
+        print(s[i-1],end="")
+        
