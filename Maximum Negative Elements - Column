@@ -1,0 +1,28 @@
+Maximum Negative Elements - Column
+
+#The program must accept an integer matrix of size RxC as the input.
+#The program must print the column number which has the most number of negative numbers in the given matrix as the output.
+#If more than one column have the most number of negative numbers then the program must print 
+#the first ocurring such column number as the output.
+#If the matrix does not contain any negative element then the program must print -1 as the output.
+
+#code
+r,c=map(int,input().split())
+l,m,n=[],0,[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+for i in range(r):
+    for j in range(c):
+        if l[i][j]<0:
+            m+=1
+if m==0:
+    print("-1")
+else:  
+    n.append(0)
+    for j in range(c):
+        k=0
+        for i in range(r):
+            if l[i][j]<0:
+                k=k+1
+        n.append(k)
+    print(n.index(max(n)))   
