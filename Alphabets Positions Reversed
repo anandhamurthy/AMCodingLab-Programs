@@ -1,0 +1,19 @@
+Alphabets Positions Reversed
+
+#The program must accept N alphabets as the input.
+#The program must print the alphabet position of each alphabet in reverse order as the output.
+
+#code
+n=int(input())
+l=list(map(str,input().split()))
+r=[]
+a="abcdefghijklmnopqrstuvwxyz"
+b="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+for i in l:
+    if i in a:
+        r.append(a.index(i)+1)
+    if i in b:
+        r.append(b.index(i)+1)
+r.reverse()        
+for i in range(len(r)):
+    print(r[i],end=" ")
