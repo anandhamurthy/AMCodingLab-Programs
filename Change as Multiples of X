@@ -1,0 +1,24 @@
+Change as Multiples of X
+
+#The program must accept N integers and an integer X as the input.
+#For each multiple of X among the N integers, the program must change all the values following it to that multiple of X, 
+until encountering another multiple of X.
+#For the last multiple of X, the program must change all the remaining values to the last multiple of X.
+#Finally, the program must print the modified N integers as the output.
+
+#code
+x,y=map(int,input().split())
+l=list(int(i) for i in input().strip().split())
+c=[]
+c.append(l[0])
+for i in range(1,x):
+    if l[i]%y==0:
+        c.append(l[i])
+    else:
+        if l[i-1]%y!=0:
+            c.append(l[i])
+        else:
+            l[i]=l[i-1]
+            c.append(l[i])
+for i in range(len(c)):
+    print(c[i],end=" ")
