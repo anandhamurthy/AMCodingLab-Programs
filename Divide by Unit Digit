@@ -1,0 +1,16 @@
+Divide by Unit Digit
+
+#The program must accept N integers as the input.
+#The program must divide each integer by its unit digit and print the result up to two decimal places as the input.
+#If the unit digit of the integer is 0 then the program must print the same integer 
+with the precision up to two decimal places as the output.
+
+#code
+n=int(input())
+l=list(map(int,input().split()))
+for i in l:
+    if i%10==0:
+         print("%.2f"%i,end=" ")
+    else:
+         c=i%10
+         print("%.2f"%(i/c),end=" ")
