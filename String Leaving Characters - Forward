@@ -1,0 +1,15 @@
+String Leaving Characters - Forward
+
+#The program must accept a string S as the input.
+#The program must print the first character, the third character, the sixth character and so on as the output.
+
+#code
+s=input()
+l,j=[],0
+for i in range(1,14):
+    l.append(j)
+    j+=1 
+    j+=i 
+for i in l:
+    if i<=len(s):
+        print(s[i],end="")
