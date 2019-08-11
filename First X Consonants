@@ -1,0 +1,19 @@
+First X Consonants
+
+#The program must accept a string S and an integer X as the input.
+#The program must print the first X consonants of S.
+#If number of consonants in the string is less than X then the program must print -1 as output.
+
+#code
+s=input().strip('\r')
+n=int(input())
+a="aeiouAEIOU"
+l=[]
+for i in range(len(s)):
+    if s[i] not in a:
+        l.append(s[i])
+if len(l)==0:
+    print('-1')
+else:
+  for i in range(n):
+      print(l[i],end="")
