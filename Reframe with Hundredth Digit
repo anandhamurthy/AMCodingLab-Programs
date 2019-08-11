@@ -1,0 +1,16 @@
+Reframe with Hundredth Digit
+
+#The program must accept an integer N and a sum value X (sum of unit digit, tenth digit and hundredth digit of N) as the input.
+#The hundredth digit is removed from N. The program must find the hundredth digit and print N by reframing it as the output.
+
+#code
+n,x=map(int,input().split())
+sum=n%10+n//10%10
+c=str(n)
+l=[]
+for i in c:
+    l.append(i)
+l.insert(len(l)-2,x-sum)
+for i in l:
+    print(i,end="")
+
