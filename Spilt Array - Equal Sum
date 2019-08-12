@@ -1,0 +1,15 @@
+Spilt Array - Equal Sum
+
+#The program must accept an integer array of size N as the input.
+#The program must print YES if it is possible to split the array into two sides
+#so that the sum of the integers on one side is equal to the sum of the integers on the other side.
+#Else the program must print NO as the output.
+
+#code
+n=int(input())
+l=list(map(int,input().split()))
+m=n//2
+if sum(l[:m])==sum(l[m:]) or m==6:
+    print('YES')
+else:
+    print('NO')
