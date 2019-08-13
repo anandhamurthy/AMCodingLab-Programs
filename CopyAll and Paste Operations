@@ -1,0 +1,17 @@
+CopyAll and Paste Operations
+
+#The program must accept an integer N and a string S as the input.
+#The program must perform two operations they are copyAll and paste repeatedly for N times.
+#Each time when the copyAll operation is performed, all the characters in the string S are copied.
+#The paste operation pastes the last copied characters at the end of the string S.
+#Finally, the program must print the number of characters present in the string S after repeating the two operations for N times.
+
+#code
+n,x=map(str,input().split())
+n=int(n)
+c=[]
+e=len(x)
+while e<=10000000000000000:
+    e*=2
+    c.append(e)
+print(c[n-1])    
