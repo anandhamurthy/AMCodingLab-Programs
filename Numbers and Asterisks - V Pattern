@@ -1,0 +1,21 @@
+Numbers and Asterisks - V Pattern
+
+#The program must accept an integer N as the input. 
+#The program must print the desired pattern as shown in the Example Input/Output section.
+
+#code
+n=int(input())
+for i in range(1,n+1):
+    for j in range(i-1):
+        print("*",end="")
+    u=1 
+    while(u<=n-i+1):
+        print(u,end="")
+        if u==n-i+1:
+            break
+        else:
+            print("*",end="")
+        u+=1 
+    for j in range(i-1):
+        print("*",end="")
+    print()    
