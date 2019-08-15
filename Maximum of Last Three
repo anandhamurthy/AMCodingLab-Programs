@@ -1,0 +1,9 @@
+Maximum of Last Three
+
+#The program must accept an integer N as the input.
+#The program must print the largest digit among the unit digit, the tenth digit and the hundredth digit as the output.
+
+#code
+n=input()
+n=n[::-1]
+print(max(int(n[0]),int(n[1]),int(n[2])))
