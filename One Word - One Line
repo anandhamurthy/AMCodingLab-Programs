@@ -1,0 +1,9 @@
+One Word - One Line
+
+#The program must accept a space separated string S as the input.
+#The program must print every word in the string in a separate line.
+
+#code
+s=input().strip().split()
+for i in s:
+    print(i)
