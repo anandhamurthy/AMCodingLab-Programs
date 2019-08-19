@@ -1,0 +1,16 @@
+Sort the String Values Based on Length
+
+#The program must accept N string values as the input.
+#The program must sort the string values based on the length of each string value in increasing order.
+#Then the program must print the sorted string values as the output.
+
+#code
+n=int(input())
+l=[]
+for i in range(n):
+    l.append(input().strip())
+l=sorted(l,key=len)
+for i in l:
+    print(i)
+    
+    
