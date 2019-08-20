@@ -1,0 +1,16 @@
+Vowel Positions
+
+#The program must accept a string value S the input.
+#The program must print the vowel positions. If there are no such vowels in S then print -1 as the output.
+
+#code
+s=input().strip()
+l=[]
+for i in range(len(s)):
+    if s[i] in "aeiouAEIOU":
+        l.append(i+1)
+if len(l)==0:
+    print("-1")
+else:
+    for i in l:
+        print(i,end=" ")
