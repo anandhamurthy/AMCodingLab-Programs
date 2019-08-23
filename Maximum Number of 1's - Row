@@ -1,0 +1,16 @@
+Maximum Number of 1's - Row
+
+#The program must accept a matrix of size NxN as the input, the matrix contains only 0's and 1's.
+#The program must count the number of 1's in each row.
+#Then the program must print the row number of the row containing the maximum number of 1's as the output.
+#If two or more rows contain the maximum number of 1's then print the first occuring row number in the given order as the output.
+
+#code
+n=int(input())
+c=[]
+l=[[0]*n for i in range(n)]
+for i in range(n):
+    l[i]=[int(i) for i in input().strip().split()]
+for i in l:
+    c.append(i.count(1))
+print(c.index(max(c))+1)    
