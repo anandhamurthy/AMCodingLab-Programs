@@ -1,0 +1,9 @@
+Multiplication Table - Reverse Order
+
+#The program must accept the value for two positive integers N and T and
+must print the multiplication table for N till the Tth multiple in reverse order.
+
+#code
+x,y=map(int,input().strip().split())
+for i in range(y,0,-1):
+    print(i,'*',x,'=',i*x);
