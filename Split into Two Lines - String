@@ -1,0 +1,27 @@
+Split into Two Lines - String
+
+#The program must accept a string S and print the string value in two lines in 
+zig zag pattern as shown in the Example Input/Output section.
+
+#Example:
+#Input:
+ abcdefg
+#Output:
+ a*c*e*g
+ *b*d*f*
+
+#code
+s=input().strip()
+el,ol=[],[]
+for i in range(len(s)):
+    if i%2==0:
+        ol.append(s[i])
+        el.append('*')
+    else:
+        ol.append('*')
+        el.append(s[i])
+for i in ol:
+    print(i,end="")
+print()
+for i in el:
+    print(i,end="")
