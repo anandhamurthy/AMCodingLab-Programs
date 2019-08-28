@@ -1,0 +1,20 @@
+Print previous Integer time's
+
+#The program must accept an integer N and for each digit D, it must be printed the number of times the value of the digit following it. 
+#The last digit does not have any digit following it, so it must not be printed.
+
+#code
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char s[100];
+    scanf("%s",s);
+    int i,j,n,k=1;
+    for(i=0;i<strlen(s);i++){
+        n=s[k]-'0';
+        for(j=0;j<n;j++)
+        printf("%d",s[i]-'0');
+        k++;
+    }
+}
