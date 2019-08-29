@@ -1,0 +1,19 @@
+Even or Odd Strength
+
+#The program must accept N integers as the input.
+#The program must print the output based on the conditions given below.
+# - If the even integers have occurred more number of times than the odd integers then the program must print even as the output. 
+# - If the odd integers have occurred more number of times than the even integers then the program must print odd as the output. 
+# - If the even integers and the odd integers have occurred equal number of times then the program must print -1 as the output.
+
+#code
+n=int(input())
+l=list(map(int,input().strip().split()))
+el=[i for i in l if i%2==0]
+ol=[i for i in l if i%2==1]
+if len(el)> len(ol):
+    print('even')
+elif len(el)==len(ol):
+    print('-1')
+else:
+    print('odd')
