@@ -1,0 +1,17 @@
+Smallest Factor Count
+
+#The program must accept N integers as the input. The program must print the smallest factor count among the N integers.
+
+#code
+def factors(x):
+    c=0
+    for i in range(1,x+1):
+        if x%i==0:
+            c+=1
+    return c                   
+n=int(input())
+l=list(map(int,input().strip().split()))
+o=[]
+for i in range(n):
+    o.append(factors(l[i]))
+print(min(o))        
