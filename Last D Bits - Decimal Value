@@ -1,0 +1,15 @@
+Last D Bits - Decimal Value
+
+#The program must accept two positive integers N and D as the input.
+#Then the program must print the decimal value represented by the last D bits in the binary representation of N.
+#Note: Always D will be less than or equal to the total number of bits in the binary representation of N.
+
+#code
+x,y=map(int,input().split())
+s=(bin(x)[2:])[::-1]
+s=s[0:y]
+s=s[::-1]
+d=0
+for i in s:
+    d=d*2 + int(i)
+print(d)    
