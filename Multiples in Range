@@ -1,0 +1,11 @@
+#Multiples in Range
+
+#The program must accept five integers A, B, X, Y and Z as the input.
+#The program must print the multiples of X, Y and Z in the range from A to B (inclusive of A and B) as the output.
+
+#code
+a,b=map(int,input().split())
+x,y,z=map(int,input().split())
+for i in range(a,b+1):
+    if i%x==0 or i%y==0 or i%z==0:
+        print(i,end=" ")
