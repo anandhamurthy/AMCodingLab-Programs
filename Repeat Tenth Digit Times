@@ -1,0 +1,12 @@
+Repeat Tenth Digit Times
+
+#The program must accept an integer N as input.
+#The program must find the tenth digit of N as T. Then the program must expand the integer N by repeating each digit fot T times.
+#Finally, the program must print the modified value of N.
+#Note: Tenth digit of N is always a non-zero value.
+
+#code
+n=input()
+t=int(n)//10%10
+for i in n:
+    print(i*t,end="")
