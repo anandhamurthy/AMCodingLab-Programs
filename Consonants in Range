@@ -1,0 +1,18 @@
+Consonants in Range
+
+#The program must accept two lower case alphabets CH1 and CH2 as the input.
+#The program must print all the consonants from CH1 to CH2 as the output.
+
+#code
+x,y=map(str,input().strip().split())
+a='abcdefghijklmnopqrstuvwxyz'
+v='aeiou'
+l,k=a.find(x),a.find(y)+1
+if l<k:
+    for i in range(l,k):
+        if a[i] not in v:
+            print(a[i],end=" ")
+elif l>k:
+    for i in range(l,k-2,-1):
+        if a[i] not in v:
+            print(a[i],end=" ")
