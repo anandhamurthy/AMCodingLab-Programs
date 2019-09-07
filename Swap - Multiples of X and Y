@@ -1,0 +1,23 @@
+Swap - Multiples of X and Y
+
+#The program must accept N integers and two integers X and Y as the input.
+#The program must swap the first occurring mutiple of X and the last occurring multiple of Y among the N integers.
+#Then the program must print modified values of the N integers as the output.
+#Note:
+#At least one multiple of X and Y are always present in the N integers.
+
+#code
+n=int(input())
+l=list(map(int,input().split()))
+x,y=map(int,input().split())
+xm,ym=0,0
+for i in range(len(l)):
+    if l[i]%x==0:
+        xm=i 
+        break
+for i in range(len(l)):
+    if l[i]%y==0:
+        ym=i
+l[xm],l[ym]=l[ym],l[xm]
+for i in l:
+    print(i,end=" ")
