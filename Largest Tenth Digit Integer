@@ -1,0 +1,10 @@
+Largest Tenth Digit Integer
+
+#The program must accept three integers X, Y and Z as the input.
+#The program must print the value having the largest tenth digit as the output. 
+#If multiple values have the largest tenth digit, then the program must print the largest value among them as the output.
+
+#code
+l=list(map(int,input().split()))
+l=sorted(l,reverse=True)
+print(max(l,key=lambda x: x//10%10))
