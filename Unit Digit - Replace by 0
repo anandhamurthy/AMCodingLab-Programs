@@ -1,0 +1,10 @@
+Unit Digit - Replace by 0
+
+#The program must accept an integer N as the input.
+#The program must replace all the occurrences of the unit digit of N by 0 in the integer N. 
+#Finally, the program must print the modified value of N as the output.
+
+#code
+n=input().strip()
+n=n.replace(str(int(n)%10),'0')
+print(abs(int(n)))
