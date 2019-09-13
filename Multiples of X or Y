@@ -1,0 +1,13 @@
+Multiples of X or Y
+
+#The program must accept two integers X and Y as the input.
+#The program must print the first 10 multiples of X if X is greater than Y.
+#Else the program must print the multiples of Y as the output.
+#code
+x,y=map(int,input().strip().split())
+if x>y:
+    for i in range(1,10+1):
+        print(i*x,end=" ")
+else:
+    for i in range(1,10+1):
+        print(i*y,end=" ")
