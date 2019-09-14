@@ -1,0 +1,22 @@
+Alternate Repeat Pattern
+
+#The program must accept a positive even integer N as the input.
+#The program must print the desired pattern as shown in the Example Input/Output section.
+
+#Example:
+Input:
+6
+Output:
+1666666
+2255555
+3334444
+
+#code
+n=int(input())
+for i in range(1,(n//2)+1):
+    for j in range(i):
+        print(i,end="")
+    for k in range(n):
+        print(n,end="")
+    n=n-1
+    print()
