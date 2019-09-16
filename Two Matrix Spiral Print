@@ -1,0 +1,26 @@
+Two Matrix Spiral Print
+
+#The program must accept two square matrices which are of size N*N.
+#Then the values in the matrices must be printed spirally in clock wise direction in a single line.
+#The values in a specific row or column of the first matrix must follow the values in the same row or column of the second matrix.
+
+#code
+n=int(input())
+l1=[list(map(int,input().split())) for i in range(n)]
+l2=[list(map(int,input().split())) for i in range(n)]
+x,y=n-1,n
+def printf(l,m):
+    for i in l[0]:
+        print(i,end=" ")
+    for i in m[0]:
+        print(i,end=" ")
+while(len(l1)>0):
+    printf(l1,l2)
+    l1.pop(0)
+    l2.pop(0)
+    l1=[i[::-1] for i in l1]
+    l2=[i[::-1] for i in l2]
+    l1=[[l1[j][i] for j in range(x)] for i in range(y)]
+    l2=[[l2[j][i] for j in range(x)] for i in range(y)]
+    x,y=x,y-1
+    x,y=y,x    
