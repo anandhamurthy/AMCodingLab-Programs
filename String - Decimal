@@ -1,0 +1,23 @@
+String - Decimal
+
+#The program must accept a string S containing only a and b as the input.
+#The program must form the binary represention of an integer X by replacing a by 1 and b by 0 in the string S.
+#Then the program must print the value of X as the output.
+
+#code
+s=input().strip()
+l=[]
+for i in s:
+    if i in 'a':
+        l.append('1')
+    else:
+        l.append('0')
+o=''.join(l)
+o=int(o)
+d,i,n=0,0,0
+while(o!=0):
+    dec=o%10
+    d=d+dec*pow(2,i)
+    o=o//10
+    i+=1
+print(d)    
