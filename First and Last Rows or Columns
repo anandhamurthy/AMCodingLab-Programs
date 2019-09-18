@@ -1,0 +1,21 @@
+First and Last Rows or Columns
+
+#The program must accept an integer matrix of size NxN as the input.
+#If N is odd then the program must print the integers in the first and last rows of the matrix as the output.
+#Else the program must print the integers in the first and last columns of the matrix as the output.
+
+#code
+n=int(input())
+l=[]
+for i in range(n):
+    l.append(list(map(int,input().split())))
+def printf(l,m):
+    for i in l:
+        print(i,end=" ")
+    for i in m:
+        print(i,end=" ")
+m=[[l[j][i] for j in range(len(l))]for i in range(len(l[0]))]
+if n%2==0:
+    printf(m[0],m[len(m)-1])
+else:
+    printf(l[0],l[len(l)-1])
