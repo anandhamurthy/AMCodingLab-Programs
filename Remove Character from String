@@ -1,0 +1,13 @@
+Remove Character from String
+
+#The program must accept a string S and a character CH as the input.
+#The program must remove all the occurrences of CH in the string S and print it as the output.
+
+#code
+s=input().strip()
+c=input().strip()
+for i in s:
+    if i==c:
+        print("",end="")
+    else:
+        print(i,end="")
