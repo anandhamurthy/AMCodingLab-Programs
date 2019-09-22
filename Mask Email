@@ -1,0 +1,13 @@
+Mask Email
+
+#A string S representing the email of a user is passed as the input.
+#The program must secure the email by masking vowels and digits with 
+#asterisk * and print the resulting masked string value M as the output.
+
+#code
+s=input().strip()
+for i in s:
+    if i in 'AEIOUaeiou' or i in '1234567890':
+        print('*',end="")
+    else:
+        print(i,end="")
