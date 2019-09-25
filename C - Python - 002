@@ -1,0 +1,26 @@
+C - Python - 002
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char str[101], format[3] = "%", specifier[] = "dc";
+    scanf("%s", str);
+    format[2] = '\0';
+    for(int index = 0; index < str[index] != '\0'; index++)
+    {
+        format[1] = specifier[index%2];
+        printf(format, str[index]);
+    }
+    return 0;
+}
+
+#code
+s=input().strip()
+for i in range(len(s)):
+    if i%2==0:
+        print(ord(s[i]),end="")
+    else:
+        print(s[i],end="")
+        
