@@ -1,0 +1,12 @@
+Rotate String - Anti-Clockwise
+
+#The program accepts a string S and an integer N as the input.
+#The program must rotate the string S for N times in anti-clockwise direction and print the modified string as the output.
+
+#code
+from collections import deque
+s=input().strip()
+n=int(input())
+x=deque(s[::-1])
+x.rotate(n)
+print(''.join(x)[::-1])
