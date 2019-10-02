@@ -19,6 +19,7 @@ int main()
 
 #code
 s=input().strip()
+l=len(s)
 print(s[len(s)%2],end="")
 if l%2==0:
     l=len(s)
